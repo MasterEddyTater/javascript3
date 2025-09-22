@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quotes</title>
+    <script>
+      // This sets up the quote array
+      var quote = [
+        "Ocean man, take me by the hand, lead me to the land that you understand.",
+        "Carry on my warward son, there'll be peace when you are done.",
+        "You will find your flow when you go robot.",
+        "Never gonna give you up, never gonna let you down.",
+        "Seasons dont fear the Reaper, nor do the wind, the sun, or the rain."
+      ];
+      /* This prompts the user to enter a number, which is then divided by 5 with a modulus to get the remainder,
+      which is what chooses the quote with the remainder corresponding with one of the quotes */
+      var num = prompt("Howdy! Please enter a number.");
+      var index = num % 5;
+      var chosen_quote = quote[index];
+      // This puts down the chosen quote
+      document.write('<span class="lavender"><h2> '+ chosen_quote + '</h2></span>');
+    </script>
+  </head>
+  <body>
+    <header>
+      <script>
+        // This sets up and writes down the original website array, while making them clickable links
+        var website = [
+          '<a href= https://www.google.com/> Google.com</a>',
+          '<a href= https://www.youtube.com/watch?v=XlQkTV0Kq2Y> Youtube.com</a>',
+          '<a href= "https://en.wikipedia.org/wiki/Toilet_paper_orientation"> Wikipedia.org</a>'
+        ];
+        document.write('<span class="lavender">' + website + "</span>");
+      </script>
+    </header>
+    <main>
+      <script>
+        /* This prompts the user to enter a website URL, which is then put into the website array, 
+        while pushing out the first element of the original array */
+        var url = prompt("Now enter your favorite website!");
+        website.push(" " + url);
+        website.shift();
+        // This writes down the new array with the user's inputted prompt
+        document.write('<span class="lavender">' + website + "</span>");
+      </script>
+    </main>
+  </body>
+</html>
